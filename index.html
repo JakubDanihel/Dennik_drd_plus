@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennik pre DrD+</title>
+    <script src = "index.js" defer></script>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h1>Dennik pre DrD+</h1>
+
+    <div class = "hlavne" id = "hlavne">
+        <div class = "meno_rasa_povolanie" id = "meno_rasa_povolanie">
+        <h3>meno:</h3>
+        <input type = "text" id = "meno_hraca" placeholder = "Meno postavy"></input>            
+        <h3>rasa:</h3>
+        <label id = "rasa_label">
+            <select id = "rasa" title = "rasa" onChange = "updateZaklAtrib()">
+                <optgroup id = "rasy_hratelne">
+                    <option value = "rolnik" id = "rolnik" >rolnik</option>
+                    <option value = "clovek" id = "clovek" >clovek</option>
+                    <option value = "trpaslik" id = "trpaslik" >trpaslik</option>
+                    <option value = "trpaslik_lesny" id = "trpaslik_lesny" >trpaslik_lesny</option>
+                    <option value = "trpaslik_horsky" id = "trpaslik_horsky" >trpaslik_horsky</option>
+                    <option value = "elf" id = "elf" >elf</option>
+                    <option value = "elf_zeleny" id = "elf_zeleny" >elf_zeleny</option>
+                    <option value = "elf_temny" id = "elf_temny" >elf_temny</option>
+                    <option value = "hobit" id = "hobit" >hobit</option>
+                    <option value = "kroll" id = "kroll" >kroll</option>
+                    <option value = "kroll_divoky" id = "kroll_divoky" >kroll_divoky</option>
+                    <option value = "skret" id = "skret" >skret</option>
+                    <option value = "skret_skurt" id = "skret_skurt" >skret_skurt</option>
+                    <option value = "skret_goblin" id = "skret_goblin" >skret_goblin</option>
+                    <option value = "horal" id = "horal" >horal</option>
+                </optgroup>
+            </select>
+        </label>
+        <h3>povolanie:</h3>
+        <label id = "povolanie_label">
+            <select id = "povolanie" title = "povolanie">
+                <optgroup id = "povolanie">
+                    <option value = "rolnik" id = "rolnik" select>rolnik</option>
+                    <option value = "bojovnik" id = "bojovnik" select>bojovnik</option>
+                    <option value = "zlodej" id = "zlodej" select>zlodej</option>
+                    <option value = "hraniciar" id = "hraniciar" select>hraniciar</option>
+                    <option value = "carodej" id = "carodej" select>carodej</option>
+                    <option value = "Theurg" id = "Theurg" select>Theurg</option>
+                    <option value = "knaz" id = "knaz" select>knaz</option>
+                </optgroup>
+            </select>
+        </label>
+        </div>
+
+        <div class = "mana_zivoty" id = "mana_zivoty">
+            <h3>magy: max/sucasne</h3>
+            <label id = "magy">magy</label>
+            <input type = "number"></input>
+            <h3>zivoty: max/sucasne</h3>
+            <label id = "zivoty">zivoty</label>
+            <input type = "number"></input>
+        </div>
+    </div>
+
+    <h2>Atributy</h2>
+    <div class = "Atributy" id = "atributy">
+        <div class = "atributy_zaklad" id = "atributy_zaklad">
+            <br><lable>atributy_zaklad</lable><br>
+            <lable>Sila: </lable>
+            <lable id = "sila_zaklad">A</lable><br>
+            <lable>Obratnost: </lable>
+            <label id = "obratnost_zaklad">A</label><br>
+            <lable>Zrucnost: </lable>
+            <lable id = "zrucnost_zaklad">A</lable><br>
+            <lable>Vola: </lable>
+            <lable id = "vola_zaklad">A</lable><br>
+            <lable>Inteligencia: </lable>
+            <lable id = "inteligencia_zaklad">A</lable><br>
+            <lable>Charizma: </lable>
+            <lable id = "charizma_zaklad">A</lable><br>
+        </div>
+
+        <div class = "atributy_pridane" id = "atributy_pridane">
+            <br><lable>atributy_pridane</lable><br>
+            <lable>Sila: </lable>
+            <input class = atributy_pridane_input type = "number" id = "sila_input"></input><br>
+            <lable>Obratnost: </lable>
+            <input class = atributy_pridane_input type = "number" id = "obratnost_input"></input><br>
+            <lable>Zrucnost: </lable>
+            <input class = atributy_pridane_input type = "number" id = "zrucnost_input"></input><br>
+            <lable>Vola: </lable>
+            <input class = atributy_pridane_input type = "number" id = "vola_input"></input><br>
+            <lable>Inteligencia: </lable>
+            <input class = atributy_pridane_input type = "number" id = "inteligencia_input"></input><br>
+            <lable>Charizma: </lable>
+            <input class = atributy_pridane_input type = "number" id = "charizma_input"></input><br>
+            <button class = "submit" type = "submit" id = "submitBtn">Odoslat</button><br>
+        </div>
+
+        <div class = "atributy_komplet" id = "atributy_komplet">
+            <br><lable>atributy_komplet</lable><br>
+            <label>Pre zmenu atributov zvol najprv rasu</label><br>
+            <lable>Sila: </lable>
+            <lable id = "sila_komplet">a</lable><br>
+            <lable>Obratnost: </lable>
+            <lable id = "obratnost_komplet">a</lable><br>
+            <lable>Zrucnost: </lable>
+            <lable id = "zrucnost_komplet">a</lable><br>
+            <lable>Vola: </lable>
+            <lable id = "vola_komplet">a</lable><br>
+            <lable>Inteligencia: </lable>
+            <lable id = "inteligencia_komplet">a</lable><br>
+            <lable>Charizma: </lable>
+            <lable id = "charizma_komplet">a</lable><br>
+        </div>
+    </div>
+
+</body>
+</html>

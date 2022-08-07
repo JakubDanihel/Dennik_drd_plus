@@ -1,0 +1,29 @@
+.hlavne{
+    margin: 1rem;
+    display: flex;
+}
+
+.mana_zivoty{
+    margin: 1rem;
+}
+
+.Atributy{
+    display: flex;
+}
+
+.atributy_zaklad{
+    margin: 1rem;
+}
+
+.atributy_pridane{
+    margin: 1rem;
+}
+
+.atributy_komplet{
+    margin: 1rem;
+}
+
+.atributy_pridane_input{
+    cursor: pointer;
+    max-width: 4rem;
+}
